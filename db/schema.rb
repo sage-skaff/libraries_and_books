@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_220_512_011_604) do
+ActiveRecord::Schema.define(version: 20_220_514_175_741) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20_220_512_011_604) do
     t.string 'name'
     t.integer 'pages'
     t.boolean 'checked_out'
+    t.bigint 'library_id'
+    t.index ['library_id'], name: 'index_books_on_library_id'
   end
 
   create_table 'libraries', force: :cascade do |t|
@@ -29,4 +31,6 @@ ActiveRecord::Schema.define(version: 20_220_512_011_604) do
     t.boolean 'open'
     t.float 'rating'
   end
+
+  add_foreign_key 'books', 'libraries'
 end
