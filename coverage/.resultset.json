@@ -242,6 +242,7 @@
         "lines": [
           1,
           1,
+          1,
           null
         ]
       },
@@ -267,9 +268,74 @@
           null
         ]
       },
+      "/Users/sageskaff/turing/2module/projects/libraries_and_books/spec/features/libraries/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          2,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/sageskaff/turing/2module/projects/libraries_and_books/spec/models/book_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/sageskaff/turing/2module/projects/libraries_and_books/app/models/book.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/sageskaff/turing/2module/projects/libraries_and_books/spec/models/library_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
       "/Users/sageskaff/turing/2module/projects/libraries_and_books/app/controllers/libraries_controller.rb": {
         "lines": [
           1,
+          1,
+          1,
+          null,
+          null,
           1,
           1,
           null,
@@ -283,6 +349,6 @@
         ]
       }
     },
-    "timestamp": 1652555133
+    "timestamp": 1652807098
   }
 }
