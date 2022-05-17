@@ -9,5 +9,11 @@ RSpec.describe Library, type: :feature do
       expect(page).to have_content('Public Library')
       expect(page).to have_content('Sage Library')
     end
+
+    it 'displays each library time of creation' do
+      visit '/libraries'
+      expect(page).to have_content(library1.created_at)
+      expect(page).to have_content(library2.created_at)
+    end
   end
 end
