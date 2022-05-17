@@ -1,4 +1,6 @@
-<%= @library.name %>
-<%= @library.rating %>
-<%="Open" if @library.open == true %>
-<%="Closed" if @library.open == false %>
+<h1><%= @library.name %></h1>
+  <%= @library.rating %>
+  <%="Open" if @library.open == true %>
+  <%="Closed" if @library.open == false %>
+  <p>Total Books: <%= @library.book_count %></p>
+

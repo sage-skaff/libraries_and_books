@@ -6,4 +6,8 @@ class Library < ApplicationRecord
   def self.most_recently_created
     order(created_at: :desc)
   end
+
+  def book_count
+    books.count
+  end
 end

@@ -22,4 +22,17 @@ RSpec.describe Library, type: :model do
       expect(Library.most_recently_created).to_not eq([library1, library2, library3])
     end
   end
+
+  describe 'instance methods' do
+    it 'shows number of books in a library' do
+      library1 = Library.create!(name: 'Public Library', rating: 2.9, open: true)
+      library2 = Library.create!(name: 'Oak Library', rating: 4.7, open: true)
+      book1 = library1.books.create!(name: 'Foundation', pages: 296, checked_out: true)
+      book2 = library1.books.create!(name: 'The Power of Now', pages: 236, checked_out: true)
+      book3 = library2.books.create!(name: 'Surface Detail', pages: 644, checked_out: true)
+
+      expect(library1.book_count).to eq(2)
+      expect(library2.book_count).to eq(1)
+    end
+  end
 end
