@@ -1,3 +1,6 @@
 class LibraryBooksController < ApplicationController
-  def index; end
+  def index
+    @library = Library.find(params[:id])
+    @books = @library.books
+  end
 end

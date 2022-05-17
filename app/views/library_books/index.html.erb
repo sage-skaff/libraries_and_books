@@ -1,0 +1,6 @@
+<h1><%= @library.name %></h1>
+<% @books.each do |book| %>
+  <h2><%= book.name %></h2>
+  <p>Pages: <%= book.pages %></p>
+  <p>Checked Out: <%= book.checked_out %></p>
+<% end %>
