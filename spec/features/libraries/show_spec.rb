@@ -9,5 +9,11 @@ RSpec.describe Library, type: :feature do
       expect(page).to have_content(2.9)
       expect(page).to have_content('Open')
     end
+
+    it 'displays the number of books in the library' do
+      book1 = library1.books.create!(name: 'Foundation', pages: 296, checked_out: true)
+      visit "/libraries/#{library1.id}"
+      expect(page).to have_content('Total Books: 1')
+    end
   end
 end
