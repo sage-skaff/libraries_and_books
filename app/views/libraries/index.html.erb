@@ -1,5 +1,6 @@
 <h1>Libraries Info</h1>
 
 <% @libraries.each do |library| %>
-  <p>Name: <%= library.name %></p>
+  <h2>Name: <%= library.name %></h2>
+  <p><%= library.created_at %></p>
 <% end %>
