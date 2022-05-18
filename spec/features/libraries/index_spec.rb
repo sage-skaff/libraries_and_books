@@ -15,5 +15,10 @@ RSpec.describe Library, type: :feature do
       expect(page).to have_content(library1.created_at)
       expect(page).to have_content(library2.created_at)
     end
+
+    it 'has link to the book index' do
+      visit '/libraries'
+      expect(page).to have_link('Book Index')
+    end
   end
 end

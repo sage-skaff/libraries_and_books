@@ -16,4 +16,9 @@ RSpec.describe 'Library Books Index Page', type: :feature do
     expect(page).to have_content(236)
     expect(page).to have_content('Checked Out: true')
   end
+
+  it 'has link to the book index' do
+    visit "/libraries/#{library1.id}/books"
+    expect(page).to have_link('Book Index')
+  end
 end

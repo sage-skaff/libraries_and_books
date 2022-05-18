@@ -10,5 +10,10 @@ RSpec.describe Book, type: :feature do
       expect(page).to have_content('The Power of Now')
       expect(page).to have_content('Foundation')
     end
+
+    it 'has link to the book index' do
+      visit '/books'
+      expect(page).to have_link('Book Index')
+    end
   end
 end
