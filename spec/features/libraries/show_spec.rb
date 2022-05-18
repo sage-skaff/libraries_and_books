@@ -25,5 +25,10 @@ RSpec.describe Library, type: :feature do
       visit '/libraries'
       expect(page).to have_link('Library Index')
     end
+
+    it 'links to the library books' do
+      visit '/libraries'
+      expect(page).to have_link('Books In This Library')
+    end
   end
 end
