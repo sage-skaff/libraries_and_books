@@ -12,5 +12,10 @@ RSpec.describe Book, type: :feature do
       expect(page).to have_content('Checked Out: true')
       expect(page).to_not have_content('Checked Out: false')
     end
+
+    it 'has link to the book index' do
+      visit "/books/#{book1.id}"
+      expect(page).to have_link('Book Index')
+    end
   end
 end
